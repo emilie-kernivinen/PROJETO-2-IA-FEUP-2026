@@ -16,7 +16,8 @@ playlist_created = st.slider("Playlists created", 0, 50, 5)
 days_since_login = st.slider("Days since last login", 0, 60, 5)
 premium_days = st.slider("Premium subscription duration (days)", 0, 1000, 100)
 liked_songs = st.slider("Liked songs", 0, 1000, 100)
-podcast_usage = st.selectbox("Uses podcasts?", [0, 1])
+podcast_choice = st.selectbox("Uses podcasts?", ["No", "Yes"])
+podcast_usage = 1 if podcast_choice == "Yes" else 0
 social_shares = st.slider("Social shares per month", 0, 30, 2)
 
 if st.button("Predict churn risk"):
