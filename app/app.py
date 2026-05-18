@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load trained model
-model = joblib.load("churn_model.pkl")
+model = joblib.load("../models/best_churn_model.pkl")
 
 st.title("Spotify Subscription Churn Predictor")
 

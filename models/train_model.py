@@ -4,6 +4,9 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # Load dataset
@@ -34,6 +37,21 @@ models = {
 
     "Gradient Boosting": GradientBoostingClassifier(
         n_estimators=100,
+        random_state=42
+    ),
+
+    "Decision Tree": DecisionTreeClassifier(
+        random_state=42,
+        class_weight="balanced"
+    ), 
+
+    "K-Nearest Neighbors": KNeighborsClassifier(
+        n_neighbors=5
+    ),
+
+    "Support Vector Machine": SVC(
+        probability=True,
+        class_weight="balanced",
         random_state=42
     )
 }
