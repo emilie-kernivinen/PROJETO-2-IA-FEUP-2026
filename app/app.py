@@ -75,11 +75,20 @@ st.markdown("""
     }
 
     div.stSlider > div > div > div {
-        color: #14803a !important;
+        color: #FFFFFF !important;
     }        
             
     div[data-testid="stProgress"] > div > div > div > div {
         background-color: #14803a !important; 
+    }
+    
+    /* Slider value numbers */
+    div.stSlider p {
+        color: #FFFFFF !important;
+    }
+
+    div.stSlider [data-testid="stMarkdownContainer"] p {
+        color: #FFFFFF !important;
     }
     </style>
 """, unsafe_allow_html=True)
